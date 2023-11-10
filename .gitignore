@@ -1,0 +1,23 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/Hongyu.framework/bin/Debug/net7.0
+/.vs/Hongyu.framework/FileContentIndex
+/Hongyu.framework/obj/Debug/net7.0
+/Hongyu.framework/obj
+/Hongyu.framework.Common/bin/Debug/net7.0
+/Hongyu.framework.Common/obj
+/Hongyu.framework.IRepository/bin/Debug/net7.0
+/Hongyu.framework.IRepository/obj
+/Hongyu.framework.IServices/bin/Debug/net7.0
+/Hongyu.framework.IServices/obj
+/Hongyu.framework.Models/bin/Debug/net7.0
+/Hongyu.framework.Models/obj/Debug/net7.0
+/Hongyu.framework.Models/obj
+/Hongyu.framework.Repository/bin/Debug/net7.0
+/Hongyu.framework.Repository/obj
+/Hongyu.framework.Services/bin/Debug/net7.0
+/Hongyu.framework.Services/obj
+/Hongyu.yu.framework.Extensions/bin/Debug/net7.0
+/Hongyu.yu.framework.Extensions/obj

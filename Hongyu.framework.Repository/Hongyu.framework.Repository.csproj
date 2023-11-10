@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hongyu.framework.IRepository\Hongyu.framework.IRepository.csproj" />
+    <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
+    <ProjectReference Include="..\Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj" />
+  </ItemGroup>
+
+</Project>
