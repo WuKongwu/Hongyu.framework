@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Hongyu.framework.IRepository
+﻿namespace Hongyu.framework.IRepository
 {
     public interface IDbContextFactory<T>
     {

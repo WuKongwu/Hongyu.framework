@@ -1,29 +1,26 @@
-﻿namespace Hongyu.framework.IRepository
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System.Linq.Expressions;
+
+namespace Hongyu.framework.IRepository
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class, new()
     {
-        /// <summary>
-        /// 新增
-        /// </summary>
-        /// <param name="t"></param>
-        void AddEntity(T t);
+        ValueTask<EntityEntry<T>> Insert(T entity);
 
-        /// <summary>
-        /// 删除
-        /// </summary>
-        /// <param name="t"></param>
-        void DeleteEntity(T t);
+        void Update(T entity);
 
-        /// <summary>
-        /// 修改
-        /// </summary>
-        /// <param name="t"></param>
-        void UpdateEntity(T t);
+        Task<int> Update(Expression<Func<T, bool>> whereLambda, Expression<Func<T, T>> entity);
 
-        /// <summary>
-        /// 查询
-        /// </summary>
-        /// <returns></returns>
-        IQueryable<T> GetAll();
+        Task<int> Delete(Expression<Func<T, bool>> whereLambda);
+
+        Task<bool> IsExist(Expression<Func<T, bool>> whereLambda);
+
+        Task<T> GetEntity(Expression<Func<T, bool>> whereLambda);
+
+        Task<List<T>> Select();
+
+        Task<List<T>> Select(Expression<Func<T, bool>> whereLambda);
+
+        Task<Tuple<List<T>, int>> Select<S>(int pageSize, int pageIndex, Expression<Func<T, bool>> whereLambda, Expression<Func<T, S>> orderByLambda, bool isAsc);
     }
 }

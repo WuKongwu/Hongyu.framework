@@ -1,16 +1,13 @@
-﻿using Hongyu.framework.Common.AppSetting;
-using Hongyu.framework.IRepository;
-using System.Data.Entity;
+﻿using Hongyu.framework.Models.Entitys;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hongyu.framework.Repository
 {
-    public class MSSQLDbContext : IDbContextFactory<DbContext>
+    public class MSSQLDbContext : DbContext
     {
-        public DbContext CreateDbContext(string conn)
+        public MSSQLDbContext(DbContextOptions<MSSQLDbContext> options):base(options)
         {
-          
-            return new DbContext(conn);
         }
-      
+        public DbSet<UserEntity> User { get; set; }
     }
 }
