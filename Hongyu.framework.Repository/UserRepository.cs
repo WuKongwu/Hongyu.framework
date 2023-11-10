@@ -1,11 +1,21 @@
 ﻿using Hongyu.framework.IRepository;
 using Hongyu.framework.Models.Entitys;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hongyu.framework.Repository
 {
-    public class UserRepository : IBaseRepository<UserEntity>, IUserRepository
+    public class UserRepository : Repository<UserEntity>, IUserRepository
     {
+        public UserRepository() { 
+        
+        }
+
         public void AddEntity(UserEntity t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DbContext CreateDbContext()
         {
             throw new NotImplementedException();
         }

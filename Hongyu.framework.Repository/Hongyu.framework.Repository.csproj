@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Hongyu.framework.Common\Hongyu.framework.Common.csproj" />
     <ProjectReference Include="..\Hongyu.framework.IRepository\Hongyu.framework.IRepository.csproj" />
     <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
     <ProjectReference Include="..\Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj" />

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
-namespace Blog.Core.Common
+namespace Hongyu.framework.Common.AppSetting
 {
     /// <summary>
     /// appsettings.json操作类

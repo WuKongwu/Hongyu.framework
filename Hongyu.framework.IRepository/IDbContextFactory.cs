@@ -1,7 +1,9 @@
-﻿namespace Hongyu.framework.IRepository
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Hongyu.framework.IRepository
 {
-    public interface IDbContextFactory<out T> where T : class
+    public interface IDbContextFactory<T>
     {
-        T CreateDbContext();
+      public  T CreateDbContext(string conn);
     }
 }

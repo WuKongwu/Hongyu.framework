@@ -1,6 +1,6 @@
 ﻿namespace Hongyu.framework.IRepository
 {
-    public interface IBaseRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         /// <summary>
         /// 新增
