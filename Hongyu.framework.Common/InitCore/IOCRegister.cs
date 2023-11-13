@@ -1,4 +1,4 @@
-﻿using Hongyu.yu.framework.Extensions.Interfaces;
+﻿using Hongyu.framework.Common.IDependencies;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -20,7 +20,7 @@ namespace Hongyu.framework.Common.InitCore
             var path = AppDomain.CurrentDomain.RelativeSearchPath ?? AppDomain.CurrentDomain.BaseDirectory;
             var getFiles = Directory.GetFiles(path, "*.dll").Where(Match);  //.Where(o=>o.Match())
             var referencedAssemblies = getFiles.Select(Assembly.LoadFrom).ToList();  //.Select(o=> Assembly.LoadFrom(o))         
- 
+
             var ss = referencedAssemblies.SelectMany(o => o.GetTypes());
 
             var types = referencedAssemblies

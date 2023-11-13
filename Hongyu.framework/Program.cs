@@ -1,6 +1,7 @@
 using Hongyu.framework.Middlewares;
+using Hongyu.framework.Repository.Interfaces;
+using Hongyu.framework.Repository;
 using Hongyu.framework.Common.InitCore;
-
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddTransient<ILogHelper, LogHelper>();
 // Add services to the container.
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 ///¶¯Ì¬ÒÀÀµ×¢Èë
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddIocRegister();
 var app = builder.Build();
 app.UseRequRespLogMiddle();

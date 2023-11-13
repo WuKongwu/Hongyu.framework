@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace Hongyu.framework.Repository.Interfaces
 {
-    public interface IRepository<T> where T : class, new()
+    public interface IRepository<T>  where T : class 
     {
         ValueTask<EntityEntry<T>> Insert(T entity);
 

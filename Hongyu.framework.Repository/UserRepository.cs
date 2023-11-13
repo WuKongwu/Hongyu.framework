@@ -8,19 +8,24 @@ namespace Hongyu.framework.Repository
     public class UserRepository : IUserRepository
     {
         private readonly IRepository<UserEntity> _repository;
-        public UserRepository(IRepository<UserEntity> repository) {
+        public UserRepository(IRepository<UserEntity> repository)
+        {
             _repository = repository;
         }
 
+        //public UserOutputModel FindUsers(UserInputModel inputModel)
+        //{
+        //    var list = _repository.Select().Result;
+        //    //var q = from li in list
+        //    //        select new UserOutput()
+        //    //        {
+        //    //            Name = li.Name,
+        //    //        };
+        //    return new UserOutputModel {  } ;
+        //}
         public UserOutputModel FindUsers(UserInputModel inputModel)
         {
-            var list = _repository.Select().Result;
-            //var q = from li in list
-            //        select new UserOutput()
-            //        {
-            //            Name = li.Name,
-            //        };
-            return new UserOutputModel {  } ;
+            throw new NotImplementedException();
         }
     }
 }

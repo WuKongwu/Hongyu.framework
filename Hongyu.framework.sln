@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Common", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Repository", "Hongyu.framework.Repository\Hongyu.framework.Repository.csproj", "{23638151-DB8F-4480-992F-AEA9A46FFD42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.yu.framework.Extensions", "Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj", "{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

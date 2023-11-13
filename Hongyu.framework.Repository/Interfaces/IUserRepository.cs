@@ -1,9 +1,9 @@
-﻿using Hongyu.framework.Models.Input;
+﻿using Hongyu.framework.Common.IDependencies;
+using Hongyu.framework.Models.Input;
 using Hongyu.framework.Models.Output;
-using Hongyu.yu.framework.Extensions.Interfaces;
 namespace Hongyu.framework.Repository.Interfaces
 {
-    public interface IUserRepository : IDependency
+    public interface IUserRepository : IScopeDependency
     {
         UserOutputModel FindUsers(UserInputModel inputModel);
     }

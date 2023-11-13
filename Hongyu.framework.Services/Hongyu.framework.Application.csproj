@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
     <ProjectReference Include="..\Hongyu.framework.Repository\Hongyu.framework.Repository.csproj" />
-    <ProjectReference Include="..\Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

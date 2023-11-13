@@ -9,12 +9,12 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Hongyu.framework.Common\Hongyu.framework.Common.csproj" />
     <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
-    <ProjectReference Include="..\Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj" />
   </ItemGroup>
 
 </Project>
