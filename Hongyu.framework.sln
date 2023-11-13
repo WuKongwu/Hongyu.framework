@@ -7,15 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework", "Hongyu.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Models", "Hongyu.framework.Models\Hongyu.framework.Models.csproj", "{C1D32C51-9E20-415D-AF66-807E3E648EF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.IServices", "Hongyu.framework.IServices\Hongyu.framework.IServices.csproj", "{96AE2EDF-571F-4E11-B3F2-7B2587EEB1E5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Services", "Hongyu.framework.Services\Hongyu.framework.Services.csproj", "{1379EBF2-8C40-4533-A6D1-F4FCAD6ADCD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Application", "Hongyu.framework.Services\Hongyu.framework.Application.csproj", "{1379EBF2-8C40-4533-A6D1-F4FCAD6ADCD8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Common", "Hongyu.framework.Common\Hongyu.framework.Common.csproj", "{4CBFEC15-84ED-4654-B8BD-85BAA0D8B100}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Repository", "Hongyu.framework.Repository\Hongyu.framework.Repository.csproj", "{23638151-DB8F-4480-992F-AEA9A46FFD42}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.IRepository", "Hongyu.framework.IRepository\Hongyu.framework.IRepository.csproj", "{8CE9BE4B-45CF-4EA8-AE70-893535C0057D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.yu.framework.Extensions", "Hongyu.yu.framework.Extensions\Hongyu.yu.framework.Extensions.csproj", "{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}"
 EndProject
@@ -33,10 +29,6 @@ Global
 		{C1D32C51-9E20-415D-AF66-807E3E648EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1D32C51-9E20-415D-AF66-807E3E648EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1D32C51-9E20-415D-AF66-807E3E648EF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96AE2EDF-571F-4E11-B3F2-7B2587EEB1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96AE2EDF-571F-4E11-B3F2-7B2587EEB1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96AE2EDF-571F-4E11-B3F2-7B2587EEB1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96AE2EDF-571F-4E11-B3F2-7B2587EEB1E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1379EBF2-8C40-4533-A6D1-F4FCAD6ADCD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1379EBF2-8C40-4533-A6D1-F4FCAD6ADCD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1379EBF2-8C40-4533-A6D1-F4FCAD6ADCD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,10 +41,6 @@ Global
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23638151-DB8F-4480-992F-AEA9A46FFD42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CE9BE4B-45CF-4EA8-AE70-893535C0057D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CE9BE4B-45CF-4EA8-AE70-893535C0057D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CE9BE4B-45CF-4EA8-AE70-893535C0057D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CE9BE4B-45CF-4EA8-AE70-893535C0057D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A65B6C1D-FA0D-4B20-B1F5-A62DFBCE144B}.Release|Any CPU.ActiveCfg = Release|Any CPU

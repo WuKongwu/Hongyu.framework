@@ -1,5 +1,5 @@
-﻿using Hongyu.framework.Common.Log;
-using Hongyu.framework.IServices;
+﻿using Hongyu.framework.Application.Interfaces;
+using Hongyu.framework.Common.Log;
 using Hongyu.framework.Models.Input;
 using Hongyu.framework.Models.Output;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +17,8 @@ namespace Hongyu.framework.Controllers
             _userService = userService;
             _logHelper = logHelper;
         }
-        [HttpPost(Name = "FindUserList")]
+        [HttpPost]
+        [Route("FindUserList")]
         public IActionResult FindUserList(UserInputModel inputModel)
         {
             UserOutputModel outputmodel = _userService.FindUserList(inputModel);
@@ -28,7 +29,7 @@ namespace Hongyu.framework.Controllers
         [Route("FindUserInfo")]
         public int FindUserInfo(int Id)
         {
-            _logHelper.Info("1234");
+            UserOutputModel outputmodel = _userService.FindUserList(new UserInputModel());
             return Id;
         }
     }

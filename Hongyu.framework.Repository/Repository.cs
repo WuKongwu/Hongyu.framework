@@ -1,7 +1,4 @@
-﻿using Hongyu.framework.Common.AppSetting;
-using Hongyu.framework.IRepository;
-using Hongyu.framework.Repository.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Data.Entity;
 using System.Linq.Expressions;
@@ -29,9 +26,9 @@ namespace Hongyu.framework.Repository
             _dbContext.Set<T>().Update(entity);
         }
 
-        //public async Task<int> Update(Expression<Func<T, bool>> whereLambda, Expression<Func<T, T>> entity)
+        //public async Task<int> Update(Expression<Func<T, bool>> where, Expression<Func<T, T>> entity)
         //{
-        //    return await _dbContext.Set<T>().Where(whereLambda).UpdateAsync(entity);
+        //    return await _dbContext.Set<T>().Where(where).UpdateAsync(entity);
         //}
 
         //public async Task<int> Delete(Expression<Func<T, bool>> whereLambda)
@@ -43,10 +40,10 @@ namespace Hongyu.framework.Repository
             return await _dbContext.Set<T>().AnyAsync(whereLambda);
         }
 
-        //public async Task<T> GetEntity(Expression<Func<T, bool>> whereLambda)
-        //{
-        //    return await _dbContext.Set<T>().AsNoTracking().FirstOrDefaultAsync(whereLambda);
-        //}
+        ////public async Task<T> GetEntity(Expression<Func<T, bool>> whereLambda)
+        ////{
+        ////    return await _dbContext.Set<T>().AsNoTracking().FirstOrDefaultAsync(whereLambda);
+        ////}
 
         public async Task<List<T>> Select()
         {

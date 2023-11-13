@@ -15,10 +15,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hongyu.framework.Common\Hongyu.framework.Common.csproj" />
-    <ProjectReference Include="..\Hongyu.framework.IServices\Hongyu.framework.IServices.csproj" />
     <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
     <ProjectReference Include="..\Hongyu.framework.Repository\Hongyu.framework.Repository.csproj" />
-    <ProjectReference Include="..\Hongyu.framework.Services\Hongyu.framework.Services.csproj" />
+    <ProjectReference Include="..\Hongyu.framework.Services\Hongyu.framework.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

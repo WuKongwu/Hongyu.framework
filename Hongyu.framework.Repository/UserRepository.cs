@@ -1,59 +1,26 @@
-﻿using Hongyu.framework.IRepository;
-using Hongyu.framework.Models.Entitys;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System.Linq.Expressions;
+﻿using Hongyu.framework.Models.Entitys;
+using Hongyu.framework.Models.Input;
+using Hongyu.framework.Models.Output;
+using Hongyu.framework.Repository.Interfaces;
 
 namespace Hongyu.framework.Repository
 {
-    public class UserRepository : IUserRepository,IRepository<UserEntity>
+    public class UserRepository : IUserRepository
     {
-        public UserRepository() { 
-        
-        }
-        public Task<int> Delete(Expression<Func<UserEntity, bool>> whereLambda)
-        {
-            throw new NotImplementedException();
+        private readonly IRepository<UserEntity> _repository;
+        public UserRepository(IRepository<UserEntity> repository) {
+            _repository = repository;
         }
 
-        public Task<UserEntity> GetEntity(Expression<Func<UserEntity, bool>> whereLambda)
+        public UserOutputModel FindUsers(UserInputModel inputModel)
         {
-            throw new NotImplementedException();
-        }
-
-        public ValueTask<EntityEntry<UserEntity>> Insert(UserEntity entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> IsExist(Expression<Func<UserEntity, bool>> whereLambda)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<UserEntity>> Select()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<UserEntity>> Select(Expression<Func<UserEntity, bool>> whereLambda)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Tuple<List<UserEntity>, int>> Select<S>(int pageSize, int pageIndex, Expression<Func<UserEntity, bool>> whereLambda, Expression<Func<UserEntity, S>> orderByLambda, bool isAsc)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(UserEntity entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> Update(Expression<Func<UserEntity, bool>> whereLambda, Expression<Func<UserEntity, UserEntity>> entity)
-        {
-            throw new NotImplementedException();
+            var list = _repository.Select().Result;
+            //var q = from li in list
+            //        select new UserOutput()
+            //        {
+            //            Name = li.Name,
+            //        };
+            return new UserOutputModel {  } ;
         }
     }
 }
