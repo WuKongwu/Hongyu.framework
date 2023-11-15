@@ -1,10 +1,6 @@
-﻿using Hongyu.framework.Common.IDependencies;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System.Linq.Expressions;
-
-namespace Hongyu.framework.Repository.Interfaces
+﻿namespace Hongyu.framework.Repository.Interfaces
 {
-    public interface IRepository:IDependency  //where T : class 
+    public interface IRepository<T>  where T : class 
     {
         ////ValueTask<EntityEntry<T>> Insert(T entity);
 
@@ -18,7 +14,7 @@ namespace Hongyu.framework.Repository.Interfaces
 
         //Task<T> GetEntity(Expression<Func<T, bool>> whereLambda);
 
-        //Task<List<T>> Select();
+        Task<List<T>> Select();
 
         //Task<List<T>> Select(Expression<Func<T, bool>> whereLambda);
 

@@ -25,12 +25,12 @@ namespace Hongyu.framework.Common.InitCore
 
             var types = referencedAssemblies
                 .SelectMany(a => a.DefinedTypes)
-                .Select(type => type.AsType())
-            .Where(x => x != baseType && baseType.IsAssignableFrom(x)).ToList();
+                .Select(type => type.AsType()).Where(x => x != baseType ).ToList();
+            //.Where(x => x != baseType && baseType.IsAssignableFrom(x)).ToList();
             //var implementTypes = types.Where(x => x.IsClass).ToList();
             //var interfaceTypes = types.Where(x => x.IsInterface).ToList();
             var implementTypes = types.Where(x => x.IsClass && x.FullName.Contains("Hongyu.framework.")).ToList();
-            var interfaceTypes = types.Where(x => x.IsInterface).ToList();
+            var interfaceTypes = types.Where(x => x.IsInterface && x.FullName.Contains("Hongyu.framework.")).ToList();
             foreach (var implementType in implementTypes)
             {
                 if (typeof(IScopeDependency).IsAssignableFrom(implementType))

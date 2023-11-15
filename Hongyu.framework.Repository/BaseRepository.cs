@@ -1,15 +1,11 @@
-﻿using Hongyu.framework.Common.IDependencies;
-using Hongyu.framework.Repository.Interfaces;
-using Hongyu.framework.Repository.UnitOfWork;
+﻿using Hongyu.framework.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Data.Entity;
-using System.Linq.Expressions;
 //using System.Data.Entity;
 
 namespace Hongyu.framework.Repositories
 {
-    public class BaseRepository : IRepository //where T : class
+    public class BaseRepository<T> : IRepository<T> where T : class, new()
     {
         //protected IUnitOfWork _unitOfWork;
      //   protected IRepository<T> _currentRepository;
@@ -48,10 +44,10 @@ namespace Hongyu.framework.Repositories
         ////    return await _dbContext.Set<T>().AsNoTracking().FirstOrDefaultAsync(whereLambda);
         ////}
 
-        //public async Task<List<T>> Select()
-        //{
-        //    return await _dbContext.Set<T>().ToListAsync();
-        //}
+        public async Task<List<T>> Select()
+        {
+            return await _dbContext.Set<T>().ToListAsync();
+        }
 
         //public async Task<List<T>> Select(Expression<Func<T, bool>> whereLambda)
         //{

@@ -11,8 +11,8 @@ namespace Hongyu.framework.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly ILogHelper _logHelper;
-        public UserController(IUserService userService,ILogHelper logHelper)
+        private readonly ILogOptionService _logHelper;
+        public UserController(IUserService userService, ILogOptionService logHelper)
         {
             _userService = userService;
             _logHelper = logHelper;
@@ -30,6 +30,7 @@ namespace Hongyu.framework.Controllers
         public int FindUserInfo(int Id)
         {
             UserOutputModel outputmodel = _userService.FindUserList(new UserInputModel());
+            _logHelper.LogInfo("TTTTTTTTTTTTTTTTTTTTTTTTT");
             return Id;
         }
     }

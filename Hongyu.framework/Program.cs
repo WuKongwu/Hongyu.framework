@@ -12,6 +12,11 @@ using System.Reflection;
 using Hongyu.framework.Common.IDependencies;
 using System.Text.RegularExpressions;
 using Hongyu.framework.Models.Entitys;
+using Microsoft.AspNetCore.Components.CompilerServices;
+using System.Runtime.CompilerServices;
+using log4net;
+using Hongyu.framework.Repositories;
+using Autofac.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddTransient<ILogHelper, LogHelper>();
@@ -20,10 +25,19 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-////builder.Services.AddScoped<IUserService,UserService>();
-//builder.Services.AddScoped(typeof(IRepository<UserEntity>),typeof(Repository<UserEntity>));
 
-builder.Services.AddIocRegister();
+builder.Host
+    .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(builder =>
+    {
+        builder.RegisterModule(new AutofacModuleRegister());
+        builder.RegisterGeneric(typeof(BaseRepository<>))
+       .As(typeof(IRepository<>))
+       .InstancePerLifetimeScope();
+    });
+builder.Services.AddTransient(typeof(IRepository<>), typeof(BaseRepository<>));
+//builder.Services.AddIocRegister();
+
 var app = builder.Build();
 app.UseRequRespLogMiddle();
 // Configure the HTTP request pipeline.
