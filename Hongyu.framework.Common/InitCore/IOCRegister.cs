@@ -26,8 +26,10 @@ namespace Hongyu.framework.Common.InitCore
             var types = referencedAssemblies
                 .SelectMany(a => a.DefinedTypes)
                 .Select(type => type.AsType())
-                .Where(x => x != baseType && baseType.IsAssignableFrom(x)).ToList();
-            var implementTypes = types.Where(x => x.IsClass).ToList();
+            .Where(x => x != baseType && baseType.IsAssignableFrom(x)).ToList();
+            //var implementTypes = types.Where(x => x.IsClass).ToList();
+            //var interfaceTypes = types.Where(x => x.IsInterface).ToList();
+            var implementTypes = types.Where(x => x.IsClass && x.FullName.Contains("Hongyu.framework.")).ToList();
             var interfaceTypes = types.Where(x => x.IsInterface).ToList();
             foreach (var implementType in implementTypes)
             {
@@ -51,6 +53,10 @@ namespace Hongyu.framework.Common.InitCore
                 }
             }
             #endregion
+
+            var basePath = AppContext.BaseDirectory;
+            var repositoryDllFile = Directory.GetFiles(path, "Hongyu.framework.Repositories.dll");  //.Where(o=>o.Match())
+            var referencedAssemblies1 = repositoryDllFile.Select(Assembly.LoadFrom).ToList();
             return services;
         }
         /// <summary>

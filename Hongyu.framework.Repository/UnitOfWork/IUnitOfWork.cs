@@ -1,8 +1,10 @@
-﻿namespace Hongyu.framework.Repository.UnitOfWork
+﻿using Hongyu.framework.Common.IDependencies;
+
+namespace Hongyu.framework.Repository.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : ITransientDependency
     {
-        MSSQLDbContext GetDbContext();
+        //MSSQLDbContext GetDbContext();
 
         Task<int> SaveChangesAsync();
     }

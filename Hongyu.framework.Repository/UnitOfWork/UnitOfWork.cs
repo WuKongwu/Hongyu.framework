@@ -1,22 +1,26 @@
 ﻿namespace Hongyu.framework.Repository.UnitOfWork
 {
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
-        private readonly MSSQLDbContext myDbContext;
+        //private readonly MSSQLDbContext myDbContext;
 
-        public UnitOfWork(MSSQLDbContext myDbContext)
-        {
-            this.myDbContext = myDbContext;
-        }
+        //public UnitOfWork(MSSQLDbContext myDbContext)
+        //{
+        //    this.myDbContext = myDbContext;
+        //}
 
-        public MSSQLDbContext GetDbContext()
-        {
-            return myDbContext;
-        }
+        //public MSSQLDbContext GetDbContext()
+        //{
+        //    return myDbContext;
+        //}
 
-        public async Task<int> SaveChangesAsync()
+        //public async Task<int> SaveChangesAsync()
+        //{
+        //    return await myDbContext.SaveChangesAsync();
+        //}
+        public Task<int> SaveChangesAsync()
         {
-            return await myDbContext.SaveChangesAsync();
+            throw new NotImplementedException();
         }
     }
 }

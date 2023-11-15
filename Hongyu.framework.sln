@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Applicatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Common", "Hongyu.framework.Common\Hongyu.framework.Common.csproj", "{4CBFEC15-84ED-4654-B8BD-85BAA0D8B100}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Repository", "Hongyu.framework.Repository\Hongyu.framework.Repository.csproj", "{23638151-DB8F-4480-992F-AEA9A46FFD42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hongyu.framework.Repositories", "Hongyu.framework.Repository\Hongyu.framework.Repositories.csproj", "{23638151-DB8F-4480-992F-AEA9A46FFD42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

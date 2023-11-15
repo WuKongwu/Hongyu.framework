@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hongyu.framework.Models\Hongyu.framework.Models.csproj" />
-    <ProjectReference Include="..\Hongyu.framework.Repository\Hongyu.framework.Repository.csproj" />
+    <ProjectReference Include="..\Hongyu.framework.Repository\Hongyu.framework.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

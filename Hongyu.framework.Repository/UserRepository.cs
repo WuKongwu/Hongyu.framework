@@ -7,11 +7,11 @@ namespace Hongyu.framework.Repository
 {
     public class UserRepository : IUserRepository
     {
-        private readonly IRepository<UserEntity> _repository;
-        public UserRepository(IRepository<UserEntity> repository)
-        {
-            _repository = repository;
-        }
+      //  private readonly IRepository<UserEntity> _repository;
+        //public UserRepository(IRepository<UserEntity> repository)
+        //{
+        //    _repository = repository;
+        //}
 
         //public UserOutputModel FindUsers(UserInputModel inputModel)
         //{

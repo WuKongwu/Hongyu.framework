@@ -10,7 +10,7 @@ namespace Hongyu.framework.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService; 
+        private readonly IUserService _userService;
         private readonly ILogHelper _logHelper;
         public UserController(IUserService userService,ILogHelper logHelper)
         {
